@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- TAILGRIDS START-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailgrids@2.2.2/plugin.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailgrids@2.2.2/assets/css/tailwind.min.css" rel="stylesheet" />
+    <!-- TAILGRIDS END -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Henny+Penny&display=swap" rel="stylesheet">
+    </head>
+  <body class="bg-dark">
+   <!-- ====== Navbar Section Start -->
+   <div class="bg-center w-full bg-[url(img/bg.jpg)] mask-b-from-80% mask-b-to-99%">
+      <div class="container mx-auto">
+         <header
+            x-data="
+            {
+            navbarOpen: false,
+            }
+            "
+            class="z-50 w-full"
+            >
+            <div class="container mx-auto">
+               <div class="relative flex items-center justify-between -mx-4">
+                  <div class="max-w-full px-4">
+                     <a href="javascript:void(0)" class="block w-full text-white text-6xl henny-penny pt-5">
+                     meluzyna
+                     </a>
+                  </div>
+                  <div class="flex items-center justify-between w-full px-4">
+                     <div>
+                        <button
+                           @click="navbarOpen = !navbarOpen"
+                           :class="navbarOpen && 'navbarTogglerActive'"
+                           id="navbarToggler"
+                           class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                           >
+                        <span
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           ></span>
+                        <span
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           ></span>
+                        <span
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           ></span>
+                        </button>
+                        <nav
+                           x-transition
+                           :class="!navbarOpen && 'hidden'"
+                           id="navbarCollapse"
+                           class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white bg-dark-2 py-5 px-6 shadow transition-all lg:static lg:bg-transparent lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11"
+                           >
+                           <ul class="block lg:flex">
+                              <li>
+                                 <a
+                                    href="javascript:void(0)"
+                                    class="flex py-2 text-base font-medium text-white hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    >
+                                 Opis jednostki
+                                 </a>
+                              </li>
+                              <li>
+                                 <a
+                                    href="javascript:void(0)"
+                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    >
+                                 Wyposażenie
+                                 </a>
+                              </li>
+                              <li>
+                                 <a
+                                    href="javascript:void(0)"
+                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    >
+                                 Cennik
+                                 </a>
+                              </li>
+                              <li>
+                                 <a
+                                    href="javascript:void(0)"
+                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    >
+                                 Kontakt
+                                 </a>
+                              </li>                     
+                           </ul>
+                        </nav>
+                     </div>
+                     <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
+                        <a
+                           href="tel:+48501388079"
+                           class="py-3 text-lg text-primary hover:text-white rounded-md bg-white px-7 hover:bg-blue-dark"
+                           >
+                           +48 501 388 079
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- ====== Navbar Section End -->
+         <!-- ====== Hero Section Start -->
+         <div
+            class="relative bg-transparent pt-[120px] pb-[110px] lg:pt-[350px]"
+            >
+            <div class="container mx-auto">
+               <div class="flex flex-wrap items-center -mx-4">
+                  <div class="w-full px-4 lg:w-5/12">
+                     <div class="hero-content">
+                        <h1
+                           class="mb-5 text-4xl font-bold !leading-[1.208] text-white sm:text-[42px] lg:text-[40px] xl:text-5xl"
+                           >
+                           Wyrusz <br />
+                           w swoją własną <br />
+                           podróż.
+                        </h1>
+                        <p
+                           class="mb-8 max-w-[600px]  text-xl text-white exo"
+                           >
+                           Łódź motorowa MELUZYNA jest nowoczesna, zwrotna i szybka.
+                           Zapewnia moc sportowych wrażeń, a przy tym jest bezpieczna.
+                           Bardzo dobrze utrzymana, jej eleganckie, jasne wnętrze powinno zadowolić najbardziej wymagających gości.
+                        </p>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="hidden px-4 lg:block lg:w-1/12"></div>
+                  <div class="w-full px-4 lg:w-6/12">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ====== Hero Section End -->
+      </div>
+   </div>
+   <!-- ====== Call To Action Section Start -->
+   <section class="bg-white dark:bg-dark">
+      <div class="container mx-auto">
+         <div
+            class="relative z-10 overflow-hidden rounded bg-transparent py-12 px-8 md:p-[70px]"
+            >
+            <div class="flex flex-wrap items-center -mx-4">
+               <div class="w-full px-4 lg:w-1/2">
+                  <span class="block mb-4 text-base font-medium text-white">
+                  Czarter z Mariny
+                  </span>
+                  <h2
+                     class="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0"
+                     >
+                     <span class="block"> Szanta Cafe </span>
+                  </h2>
+               </div>
+               <div class="w-full px-4 lg:w-1/2 text-end">
+                     <span class="block text-base font-medium text-white">
+                     Adres:
+                     </span>                  
+                     <span class="block text-2xl text-white">ul. Warszawska 47<br>05-130 Zegrze Południowe</span>
+               </div>
+            </div>
+            <div>
+               <span class="absolute top-0 left-0 z-[-1]">
+                  <svg
+                     width="189"
+                     height="162"
+                     viewBox="0 0 189 162"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                     >
+                     <ellipse
+                        cx="16"
+                        cy="-16.5"
+                        rx="173"
+                        ry="178.5"
+                        transform="rotate(180 16 -16.5)"
+                        fill="url(#paint0_linear)"
+                        />
+                     <defs>
+                        <linearGradient
+                           id="paint0_linear"
+                           x1="-157"
+                           y1="-107.754"
+                           x2="98.5011"
+                           y2="-106.425"
+                           gradientUnits="userSpaceOnUse"
+                           >
+                           <stop stop-color="white" stop-opacity="0.07" />
+                           <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                     </defs>
+                  </svg>
+               </span>
+               <span class="absolute bottom-0 right-0 z-[-1]">
+                  <svg
+                     width="191"
+                     height="208"
+                     viewBox="0 0 191 208"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                     >
+                     <ellipse
+                        cx="173"
+                        cy="178.5"
+                        rx="173"
+                        ry="178.5"
+                        fill="url(#paint0_linear)"
+                        />
+                     <defs>
+                        <linearGradient
+                           id="paint0_linear"
+                           x1="-3.27832e-05"
+                           y1="87.2457"
+                           x2="255.501"
+                           y2="88.5747"
+                           gradientUnits="userSpaceOnUse"
+                           >
+                           <stop stop-color="white" stop-opacity="0.07" />
+                           <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                     </defs>
+                  </svg>
+               </span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Call To Action Section End -->   
+  </body>
+</html>
