@@ -19,7 +19,7 @@
     </head>
   <body class="bg-dark">
    <!-- ====== Navbar Section Start -->
-   <div class="bg-center w-full bg-[url(img/bg.jpg)] mask-b-from-80% mask-b-to-99%">
+   <div class="bg-center w-full lg:bg-[url(img/bg.jpg)] bg-[url(img/bg1.jpg)] mask-b-from-80% mask-b-to-99%">
       <div class="container mx-auto">
          <header
             x-data="
@@ -27,12 +27,12 @@
             navbarOpen: false,
             }
             "
-            class="z-50 w-full"
+            class="w-full"
             >
             <div class="container mx-auto">
                <div class="relative flex items-center justify-between -mx-4">
                   <div class="max-w-full px-4">
-                     <a href="javascript:void(0)" class="block w-full text-white text-6xl henny-penny pt-5">
+                     <a href="#top" class="block w-full text-white text-6xl henny-penny pt-5">
                      meluzyna
                      </a>
                   </div>
@@ -42,29 +42,29 @@
                            @click="navbarOpen = !navbarOpen"
                            :class="navbarOpen && 'navbarTogglerActive'"
                            id="navbarToggler"
-                           class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                           class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 mt-6 py-[6px] ring-white focus:ring-2 lg:hidden"
                            >
                         <span
-                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-white "
                            ></span>
                         <span
-                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-white "
                            ></span>
                         <span
-                           class="relative my-[6px] block h-[2px] w-[30px] bg-body-color "
+                           class="relative my-[6px] block h-[2px] w-[30px] bg-white "
                            ></span>
                         </button>
                         <nav
                            x-transition
                            :class="!navbarOpen && 'hidden'"
                            id="navbarCollapse"
-                           class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white bg-dark-2 py-5 px-6 shadow transition-all lg:static lg:bg-transparent lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11"
+                           class=" z-50 absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white bg-dark-2 py-5 px-6 shadow transition-all lg:static lg:bg-transparent lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11"
                            >
                            <ul class="block lg:flex">
                               <li>
                                  <a
                                     href="#gallery"
-                                    class="flex py-2 text-base font-medium text-white hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    class="flex py-2 text-base font-medium lg:text-white text-primary hover:text-primary hover:underline lg:ml-5 lg:inline-flex uppercase exo"
                                     >
                                  Galeria
                                  </a>
@@ -72,39 +72,31 @@
                               <li>
                                  <a
                                     href="#opis"
-                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    class="flex py-2 text-base font-medium lg:text-white text-primary  hover:text-primary hover:underline lg:ml-5 lg:inline-flex uppercase exo"
                                     >
                                  Opis i wyposażenie
                                  </a>
-                              </li>                              
+                              </li>
                               <li>
                                  <a
                                     href="#movies"
-                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    class="flex py-2 text-base font-medium lg:text-white text-primary  hover:text-primary hover:underline lg:ml-5 lg:inline-flex uppercase exo"
                                     >
                                  Filmy
                                  </a>
                               </li>
                               <li>
                                  <a
-                                    href="javascript:void(0)"
-                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
+                                    href="#contact"
+                                    class="flex py-2 text-base font-medium lg:text-white text-primary  hover:text-primary hover:underline lg:ml-5 lg:inline-flex uppercase exo"
                                     >
-                                 Cennik
+                                 Cennik & Kontakt
                                  </a>
                               </li>
-                              <li>
-                                 <a
-                                    href="javascript:void(0)"
-                                    class="flex py-2 text-base font-medium text-white  hover:text-primary lg:ml-10 lg:inline-flex uppercase exo"
-                                    >
-                                 Kontakt
-                                 </a>
-                              </li>                     
                            </ul>
                         </nav>
                      </div>
-                     <div class="justify-end hidden pr-16 sm:flex lg:pr-0">
+                     <div class="justify-end hidden pr-16 xl:flex">
                         <a
                            href="tel:+48501388079"
                            class="py-3 text-lg text-primary hover:text-white rounded-md bg-white px-7 hover:bg-blue-dark"
@@ -123,30 +115,29 @@
             >
             <div class="container mx-auto">
                <div class="flex flex-wrap items-center -mx-4">
-                  <div class="w-full px-4 lg:w-5/12">
-                     <div class="hero-content">
+                  <div class="w-full px-4 lg:w-7/12">
+                     <div class="hero-content min-h-[150px] lg:min-h-[10px]">
                         <h1
-                           class="mb-5 text-4xl font-bold !leading-[1.208] text-white sm:text-[42px] lg:text-[40px] xl:text-5xl"
+                           class="mb-5 text-4xl font-bold !leading-[1.208] text-white sm:text-[42px] lg:text-[40px] xl:text-5xl hidden lg:block"
                            >
                            Wyrusz <br />
                            w swoją własną <br />
                            podróż.
                         </h1>
                         <p
-                           class="mb-8 max-w-[600px]  text-xl text-white exo"
+                           class="mb-8 max-w-[600px]  text-xl text-white exo hidden lg:block"
                            >
                            Łódź motorowa MELUZYNA jest nowoczesna, zwrotna i szybka.
                            Zapewnia moc sportowych wrażeń, a przy tym jest bezpieczna.
                            Bardzo dobrze utrzymana, jej eleganckie, jasne wnętrze powinno zadowolić najbardziej wymagających gości.
                         </p>
-                        <p class=" text-xl text-white exo">
+                        <p class=" text-xl text-white exo hidden lg:block">
                            UWAGA: wymagany patent motorowodny !
                         </p>
                         </ul>
                      </div>
                   </div>
-                  <div class="hidden px-4 lg:block lg:w-1/12"></div>
-                  <div class="w-full px-4 lg:w-6/12">
+                  <div class="w-full px-4 lg:w-5/12">
                   </div>
                </div>
             </div>
@@ -156,26 +147,28 @@
    </div>
 
    <!-- ====== Blog Section Start -->
-   <section class="pt-20 lg:pt-[120px] bg-white dark:bg-dark" id="gallery">
+   <section class="xl:pt-[120px] bg-dark" id="gallery">
       <div class="container mx-auto">
-         <!-- <div class="flex flex-wrap justify-center -mx-4">
-            <div class="w-full px-4">
-               <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-                  <span class="block mb-2 text-lg font-semibold text-primary">
-                  Our Blogs
-                  </span>
-                  <h2
-                     class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] dark:text-white"
-                     >
-                     Our Recent News
-                  </h2>
-                  <p class="text-base text-body-color dark:text-dark-6">
-                     There are many variations of passages of Lorem Ipsum available
-                     but the majority have suffered alteration in some form.
-                  </p>
-               </div>
-            </div>
-         </div> -->
+         <div class="lg:hidden pb-10 xl:pb-0">
+         <h1
+            class="mb-5 text-4xl font-bold !leading-[1.208] text-white sm:text-[42px] lg:text-[40px] xl:text-5xl"
+            >
+            Wyrusz <br />
+            w swoją własną <br />
+            podróż.
+         </h1>
+         <p
+            class="mb-8 max-w-[600px]  text-xl text-white exo"
+            >
+            Łódź motorowa MELUZYNA jest nowoczesna, zwrotna i szybka.
+            Zapewnia moc sportowych wrażeń, a przy tym jest bezpieczna.
+            Bardzo dobrze utrzymana, jej eleganckie, jasne wnętrze powinno zadowolić najbardziej wymagających gości.
+         </p>
+         <p class=" text-xl text-white exo ">
+            UWAGA: wymagany patent motorowodny !
+         </p>
+         </ul>
+         </div>
          <div class="flex flex-wrap -mx-4">
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                <div class="w-full mb-10">
@@ -242,14 +235,113 @@
                         />
                   </div>
                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb7.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb8.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb9.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb10.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb11.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb12.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb13.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb14.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="w-full mb-10">
+                  <div class="mb-8 overflow-hidden rounded">
+                     <img
+                        src="img/thumb15.jpg"
+                        alt="image"
+                        class="w-full"
+                        />
+                  </div>
+               </div>
             </div>            
          </div>
       </div>
    </section>
-   <!-- ====== Blog Section End -->   
+   <!-- ====== Blog Section End -->
 
       <!-- ====== Call To Action Section Start -->
-      <section class="bg-white dark:bg-dark pb-14" id="opis">
+      <section class="bg-dark pb-14" id="opis">
          <div class="container mx-auto">
             <div
                class="relative z-10 overflow-hidden rounded bg-transparent py-12 px-8"
@@ -269,7 +361,7 @@
                      <li>zbiornik: 75l (+zapas kanister 2x10l)</li>
                      </ol>
                   </div>
-                  <div class="w-full px-4 lg:w-1/2 text-end">
+                  <div class="w-full px-4 pt-10 lg:pt-0 lg:w-1/2 text-end">
                      <ol class="text-white exo">
                         <li class="text-3xl pb-2">Wyposażenie:</li>
                         <li>bimini/cabrio</li>
@@ -281,36 +373,32 @@
                         <li>kotwica, odbojniki, cumy, koło ratunkowe,</li>
                         <li>pagaj, bosak, apteczka, 3 gaśnice</li>
                         <li>kamizelki ratunkowe</li>
-                        <li>(7 szt. pełna rozmiarówka w tym dziecięca)</li>
+                        <li>(8 szt. pełna rozmiarówka w tym 2 dziecięce)</li>
                         </ol>
                   </div>
                </div>
             </div>
+            <div id="movies"></div>
          </div>
       </section>
-      <!-- ====== Call To Action Section End -->  
+      <!-- ====== Call To Action Section End -->
 
    <!-- ====== Video Section Start -->
-   <section class="bg-white dark:bg-dark pb-16" id="movies">
+   <section class="bg-dark pb-16" id="movies">
       <div class="container mx-auto">
-         <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4 md:w-1/2 lg:w-1/2">
-               <video controls>
-                  <source src="video/vid1.mp4" type='video/mp4'>
-               </video>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/2">
-               <video controls>
+         <div class="grid justify-center">
+            <div class="w-full px-4">
+               <video controls class="bg-[url(img/bg21.jpg)] overflow-hidden">
                   <source src="video/vid2.mp4" type='video/mp4'>
                </video>
-            </div>           
+            </div>
          </div>
       </div>
    </section>
-   <!-- ====== Video Section End -->   
+   <!-- ====== Video Section End -->
 
    <!-- ====== Call To Action Section Start -->
-   <section class="bg-white dark:bg-dark">
+   <section class="bg-dark">
       <div class="container mx-auto">
          <div
             class="relative z-10 overflow-hidden rounded bg-transparent py-12 px-8 md:p-[70px]"
@@ -329,7 +417,7 @@
                <div class="w-full px-4 lg:w-1/2 text-end">
                      <span class="block text-base font-medium text-white">
                      Adres:
-                     </span>                  
+                     </span>
                      <span class="block text-2xl text-white">ul. Warszawska 47<br>05-130 Zegrze Południowe</span>
                </div>
             </div>
@@ -399,7 +487,183 @@
          </div>
       </div>
    </section>
-   <!-- ====== Call To Action Section End -->  
+   <!-- ====== Call To Action Section End -->
+
+<!-- ====== Contact Section Start -->
+<section
+   class="relative overflow-hidden bg-dark lg:pb-20 pt-10 " id="contact"
+   >
+   <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4 lg:justify-between lg:pl-20">
+         <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
+            <div class="mb-12 max-w-[570px] lg:mb-0">
+               <span class="block mb-4 text-xl font-semibold text-white">
+               Odezwij się do nas
+               </span>
+               <p
+                  class="text-base leading-relaxed text-body-color mb-9"
+                  >
+                  Masz pytania lub wątpliwości? Zadzwoń lub napisz.
+               </p>
+               <div class="mb-5 flex w-full max-w-[370px]">
+                  <div
+                     class="bg-primary/5 text-white mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]"
+                     >
+                     <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <g clip-path="url(#clip0_941_17577)">
+                           <path
+                              d="M24.3 31.1499C22.95 31.1499 21.4 30.7999 19.7 30.1499C16.3 28.7999 12.55 26.1999 9.19997 22.8499C5.84997 19.4999 3.24997 15.7499 1.89997 12.2999C0.39997 8.59994 0.54997 5.54994 2.29997 3.84994C2.34997 3.79994 2.44997 3.74994 2.49997 3.69994L6.69997 1.19994C7.74997 0.599942 9.09997 0.899942 9.79997 1.89994L12.75 6.29994C13.45 7.34994 13.15 8.74994 12.15 9.44994L10.35 10.6999C11.65 12.7999 15.35 17.9499 21.25 21.6499L22.35 20.0499C23.2 18.8499 24.55 18.4999 25.65 19.2499L30.05 22.1999C31.05 22.8999 31.35 24.2499 30.75 25.2999L28.25 29.4999C28.2 29.5999 28.15 29.6499 28.1 29.6999C27.2 30.6499 25.9 31.1499 24.3 31.1499ZM3.79997 5.54994C2.84997 6.59994 2.89997 8.74994 3.99997 11.4999C5.24997 14.6499 7.64997 18.0999 10.8 21.2499C13.9 24.3499 17.4 26.7499 20.5 27.9999C23.2 29.0999 25.35 29.1499 26.45 28.1999L28.85 24.0999C28.85 24.0499 28.85 24.0499 28.85 23.9999L24.45 21.0499C24.45 21.0499 24.35 21.0999 24.25 21.2499L23.15 22.8499C22.45 23.8499 21.1 24.1499 20.1 23.4999C13.8 19.5999 9.89997 14.1499 8.49997 11.9499C7.84997 10.8999 8.09997 9.54994 9.09997 8.84994L10.9 7.59994V7.54994L7.94997 3.14994C7.94997 3.09994 7.89997 3.09994 7.84997 3.14994L3.79997 5.54994Z"
+                              fill="currentColor"
+                              />
+                           <path
+                              d="M29.3 14.25C28.7 14.25 28.25 13.8 28.2 13.2C27.8 8.15003 23.65 4.10003 18.55 3.75003C17.95 3.70003 17.45 3.20003 17.5 2.55003C17.55 1.95003 18.05 1.45003 18.7 1.50003C24.9 1.90003 29.95 6.80003 30.45 13C30.5 13.6 30.05 14.15 29.4 14.2C29.4 14.25 29.35 14.25 29.3 14.25Z"
+                              fill="currentColor"
+                              />
+                           <path
+                              d="M24.35 14.7002C23.8 14.7002 23.3 14.3002 23.25 13.7002C22.95 11.0002 20.85 8.90018 18.15 8.55018C17.55 8.50018 17.1 7.90018 17.15 7.30018C17.2 6.70018 17.8 6.25018 18.4 6.30018C22.15 6.75018 25.05 9.65018 25.5 13.4002C25.55 14.0002 25.15 14.5502 24.5 14.6502C24.4 14.7002 24.35 14.7002 24.35 14.7002Z"
+                              fill="currentColor"
+                              />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_941_17577">
+                              <rect width="32" height="32" fill="white" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="mb-1 text-xl font-bold text-white">
+                        Tomek
+                     </h4>
+                     <p class="text-base text-body-color">
+                        +48 501 388 079
+                     </p>
+                  </div>
+               </div>
+               <div class="mb-5 flex w-full max-w-[370px]">
+                  <div
+                     class="bg-primary/5 text-white mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]"
+                     >
+                     <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <g clip-path="url(#clip0_941_17577)">
+                           <path
+                              d="M24.3 31.1499C22.95 31.1499 21.4 30.7999 19.7 30.1499C16.3 28.7999 12.55 26.1999 9.19997 22.8499C5.84997 19.4999 3.24997 15.7499 1.89997 12.2999C0.39997 8.59994 0.54997 5.54994 2.29997 3.84994C2.34997 3.79994 2.44997 3.74994 2.49997 3.69994L6.69997 1.19994C7.74997 0.599942 9.09997 0.899942 9.79997 1.89994L12.75 6.29994C13.45 7.34994 13.15 8.74994 12.15 9.44994L10.35 10.6999C11.65 12.7999 15.35 17.9499 21.25 21.6499L22.35 20.0499C23.2 18.8499 24.55 18.4999 25.65 19.2499L30.05 22.1999C31.05 22.8999 31.35 24.2499 30.75 25.2999L28.25 29.4999C28.2 29.5999 28.15 29.6499 28.1 29.6999C27.2 30.6499 25.9 31.1499 24.3 31.1499ZM3.79997 5.54994C2.84997 6.59994 2.89997 8.74994 3.99997 11.4999C5.24997 14.6499 7.64997 18.0999 10.8 21.2499C13.9 24.3499 17.4 26.7499 20.5 27.9999C23.2 29.0999 25.35 29.1499 26.45 28.1999L28.85 24.0999C28.85 24.0499 28.85 24.0499 28.85 23.9999L24.45 21.0499C24.45 21.0499 24.35 21.0999 24.25 21.2499L23.15 22.8499C22.45 23.8499 21.1 24.1499 20.1 23.4999C13.8 19.5999 9.89997 14.1499 8.49997 11.9499C7.84997 10.8999 8.09997 9.54994 9.09997 8.84994L10.9 7.59994V7.54994L7.94997 3.14994C7.94997 3.09994 7.89997 3.09994 7.84997 3.14994L3.79997 5.54994Z"
+                              fill="currentColor"
+                              />
+                           <path
+                              d="M29.3 14.25C28.7 14.25 28.25 13.8 28.2 13.2C27.8 8.15003 23.65 4.10003 18.55 3.75003C17.95 3.70003 17.45 3.20003 17.5 2.55003C17.55 1.95003 18.05 1.45003 18.7 1.50003C24.9 1.90003 29.95 6.80003 30.45 13C30.5 13.6 30.05 14.15 29.4 14.2C29.4 14.25 29.35 14.25 29.3 14.25Z"
+                              fill="currentColor"
+                              />
+                           <path
+                              d="M24.35 14.7002C23.8 14.7002 23.3 14.3002 23.25 13.7002C22.95 11.0002 20.85 8.90018 18.15 8.55018C17.55 8.50018 17.1 7.90018 17.15 7.30018C17.2 6.70018 17.8 6.25018 18.4 6.30018C22.15 6.75018 25.05 9.65018 25.5 13.4002C25.55 14.0002 25.15 14.5502 24.5 14.6502C24.4 14.7002 24.35 14.7002 24.35 14.7002Z"
+                              fill="currentColor"
+                              />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_941_17577">
+                              <rect width="32" height="32" fill="white" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="mb-1 text-xl font-bold text-white">
+                        Darek
+                     </h4>
+                     <p class="text-base text-body-color">
+                        +48 666 228 498
+                     </p>
+                  </div>
+               </div>
+               <div class="mb-5 flex w-full max-w-[370px]">
+                  <div
+                     class="bg-primary/5 text-white mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]"
+                     >
+                     <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M28 4.7998H3.99998C2.29998 4.7998 0.849976 6.1998 0.849976 7.9498V24.1498C0.849976 25.8498 2.24998 27.2998 3.99998 27.2998H28C29.7 27.2998 31.15 25.8998 31.15 24.1498V7.8998C31.15 6.1998 29.7 4.7998 28 4.7998ZM28 7.0498C28.05 7.0498 28.1 7.0498 28.15 7.0498L16 14.8498L3.84998 7.0498C3.89998 7.0498 3.94998 7.0498 3.99998 7.0498H28ZM28 24.9498H3.99998C3.49998 24.9498 3.09998 24.5498 3.09998 24.0498V9.2498L14.8 16.7498C15.15 16.9998 15.55 17.0998 15.95 17.0998C16.35 17.0998 16.75 16.9998 17.1 16.7498L28.8 9.2498V24.0998C28.9 24.5998 28.5 24.9498 28 24.9498Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="mb-1 text-xl font-bold text-white">
+                        Email
+                     </h4>
+                     <p class="text-base text-body-color">
+                        <a href="email:tomaszgadkowski@interia.pl">tomaszgadkowski@interia.pl</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w-full px-4 lg:w-1/2 lg:pl-20">
+            <div class="mb-12 lg:mb-0">
+               <span class="block mb-4 text-xl font-semibold text-white">
+               Cennik 2025
+               </span>
+               <h2
+                  class="text-white mb-6 mt-6 text-2xl"
+                  >
+                  <span class="text-white text-6xl henny-penny pt-5">meluzyna</a>
+               </h2>
+               <div class="mb-8 flex w-full">
+                  <div class="w-full">
+                     <h4 class="mb-2 text-xl text-white">
+                        1 h - 500 zł
+                     </h4>
+                     <h4 class="mb-1 text-xl text-white">
+                        1 dzień - 2500 zł (od świtu do zmierzchu)
+                     </h4>
+                     <p
+                     class="text-base leading-relaxed text-body-color mb-2"
+                     >
+                     Kaucja - 1000 zł
+                     </p>
+                     <p
+                     class="text-base leading-relaxed text-body-color mb-9"
+                     >
+                     Koszt paliwa pokrywa wynajmujący
+                     </p>
+                     <h4 class="mb-1 text-xl text-white">
+                        Możliwość czarteru ze sternikiem:<br />+ 100 zł za godzinę<br />+ 500 zł cały dzień
+                     </h4>                   
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- ====== Contact Section End -->
+
+<div class="fixed bottom-0 right-0 p-4 z-20">
+   <a href="#top">
+   <button class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+     </svg>
+   </button>
+   </a>
+ </div>
 
   </body>
 </html>
